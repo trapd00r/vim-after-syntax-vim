@@ -17,7 +17,7 @@ hi vimColon                ctermfg=160  cterm=bold
 hi vimParens               ctermfg=244  cterm=bold
 hi vimVar                  ctermfg=148  cterm=none
 hi vimOper                 ctermfg=none cterm=bold
-hi vimLet                  ctermfg=208  cterm=bold
+hi vimLet                  ctermfg=166  cterm=none
 hi vimNotFunc              ctermfg=196  cterm=bold
 hi vimAutoCmd              ctermfg=175
 hi vimAutoEvent            ctermfg=131
