@@ -2,7 +2,7 @@
 "   Where: $VIMRUNTIME/after/syntax/vim.vim
 "  Author: Magnus Woldrich <m@japh.se>
 "     URL: http://github.com/trapd00r/vim-after-syntax-vim
-" Updated: 2011-07-06 11:09:08
+" Updated: 2014-12-27 10:55:20
 
 syn match vimColon         display '\v\s+\:\s+'
 syn match vimLetSet        display '\v<[sl]et>'
