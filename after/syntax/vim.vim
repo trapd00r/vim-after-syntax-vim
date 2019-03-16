@@ -2,7 +2,7 @@
 "   Where: $VIMRUNTIME/after/syntax/vim.vim
 "  Author: Magnus Woldrich <m@japh.se>
 "     URL: http://github.com/trapd00r/vim-after-syntax-vim
-" Updated: 2016-09-27 13:02:19
+" Updated: 2019-03-16 16:27:02
 
 syn match vimColon         display '\v\s+\:\s+'
 syn match vimLetSet        display '\v<[sl]et>'
@@ -29,7 +29,8 @@ hi vimHiCterm              ctermfg=102  cterm=NONE        guifg=#878787  gui=NON
 hi vimHiCtermFgBg          ctermfg=073  cterm=NONE        guifg=#5FAFAF  gui=NONE
 hi vimLet                  ctermfg=166  cterm=NONE        guifg=#DF5F00  gui=NONE
 hi vimLetSet               ctermfg=197  cterm=NONE        guifg=#FF005F  gui=NONE
-hi vimLineComment          ctermfg=245  cterm=italic      guifg=#8A8A8A  gui=italic
+"hi vimLineComment          ctermfg=245  cterm=italic      guifg=#8A8A8A  gui=italic
+hi link vimLineComment Comment
 hi vimNotFunc              ctermfg=196  cterm=bold        guifg=#FF0000  gui=bold
 hi vimNotation             ctermfg=142  cterm=bold        guifg=#AFAF00  gui=bold
 hi vimOper                 ctermfg=NONE cterm=bold        guifg=NONE     gui=bold
