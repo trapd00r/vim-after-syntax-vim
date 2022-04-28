@@ -2,7 +2,7 @@
 "   Where: $VIMRUNTIME/after/syntax/vim.vim
 "  Author: Magnus Woldrich <m@japh.se>
 "     URL: http://github.com/trapd00r/vim-after-syntax-vim
-" Updated: 2019-03-16 16:27:02
+" Updated: 2022-04-28 10:41:13
 
 syn match vimColon         display '\v\s+\:\s+'
 syn match vimLetSet        display '\v<[sl]et>'
@@ -10,33 +10,100 @@ syn match vimParens        display '('
 syn match vimParens        display ')'
 syn match vimQuestionmark  display '\v\s+\?\s+'
 syn match vimVar           display '\v<[wtgls]:[A-Za-z0-9_-]+'
-syn match vimVar           display '\v<[wtgls]:[A-Za-z0-9_-]+'
 
-hi vimMap                  ctermfg=143                    guifg=#AFAF5F
-hi vimMapRhs               ctermfg=250  cterm=NONE        guifg=#BCBCBC  gui=NONE
+highlight link vimLineComment Comment
 
-hi vimAutoCmd              ctermfg=175                    guifg=#DF87AF
-hi vimAutoEvent            ctermfg=131                    guifg=#AF5F5F
-hi vimBracket              ctermfg=240  cterm=bold        guifg=#585858  gui=bold
-hi vimColon                ctermfg=160  cterm=bold        guifg=#DF0000  gui=bold
-hi vimContinue             ctermfg=209  cterm=bolditalic  guifg=#DF0000  gui=bold
-hi vimFuncKey              ctermfg=111  cterm=NONE        guifg=#87AFFF  gui=NONE
-hi vimFuncName             ctermfg=250  cterm=bold        guifg=#BCBCBC  gui=bold
-hi vimFunction             ctermfg=033  cterm=bold        guifg=#0087FF  gui=bold
-hi vimHiAttrib             ctermfg=108  cterm=NONE        guifg=#87AF87  gui=NONE
-hi vimHiAttribList         ctermfg=109  cterm=NONE        guifg=#87AF87  gui=NONE
-hi vimHiCterm              ctermfg=102  cterm=NONE        guifg=#878787  gui=NONE
-hi vimHiCtermFgBg          ctermfg=073  cterm=NONE        guifg=#5FAFAF  gui=NONE
-hi vimLet                  ctermfg=166  cterm=NONE        guifg=#DF5F00  gui=NONE
-hi vimLetSet               ctermfg=197  cterm=NONE        guifg=#FF005F  gui=NONE
-"hi vimLineComment          ctermfg=245  cterm=italic      guifg=#8A8A8A  gui=italic
-hi link vimLineComment Comment
-hi vimNotFunc              ctermfg=196  cterm=bold        guifg=#FF0000  gui=bold
-hi vimNotation             ctermfg=142  cterm=bold        guifg=#AFAF00  gui=bold
-hi vimOper                 ctermfg=NONE cterm=bold        guifg=NONE     gui=bold
-hi vimParens               ctermfg=244  cterm=bold        guifg=#808080  gui=bold
-hi vimQuestionmark         ctermfg=082  cterm=bold        guifg=#5FFF00  gui=bold
-hi vimString               ctermfg=143  cterm=NONE        guifg=#AFAF5F  gui=NONE
-hi vimSynMtchOpt           ctermfg=131                    guifg=#AF5F5F
-hi vimUserFunc             ctermfg=255                    guifg=#EEEEEE
-hi vimVar                  ctermfg=148  cterm=NONE        guifg=#AFDF00  gui=NONE
+highlight vimAutoCmd              ctermfg=175
+highlight vimAutoEvent            ctermfg=131
+highlight vimBracket              ctermfg=240  cterm=bold
+highlight vimCmdSep               ctermfg=179  ctermbg=bg   cterm=none
+highlight vimColon                ctermfg=160  cterm=bold
+highlight vimCommentTitle         ctermfg=218  ctermbg=bg  cterm=bold
+highlight vimContinue             ctermfg=209  cterm=bolditalic
+highlight vimCommand              ctermfg=208  cterm=bolditalic
+highlight vimIsCommand            ctermfg=231  cterm=bolditalic
+highlight vimFuncKey              ctermfg=111  cterm=none
+highlight vimFuncName             ctermfg=250  cterm=bold
+highlight vimFunction             ctermfg=033  cterm=bold
+highlight vimHiAttrib             ctermfg=108  cterm=none
+highlight vimHiAttribList         ctermfg=109  cterm=none
+highlight vimHiCterm              ctermfg=102  cterm=none
+highlight vimHiCtermFgBg          ctermfg=073  cterm=none
+highlight vimLet                  ctermfg=166  cterm=none
+highlight vimLetSet               ctermfg=197  cterm=none
+highlight vimMap                  ctermfg=143
+highlight vimMapModKey            ctermfg=208
+highlight vimMapRhs               ctermfg=250  cterm=none
+highlight vimNotFunc              ctermfg=196  cterm=bold
+highlight vimNotation             ctermfg=142  cterm=bold
+highlight vimOper                 ctermfg=none cterm=bold
+highlight vimParens               ctermfg=244  cterm=bold
+highlight vimQuestionmark         ctermfg=082  cterm=bold
+highlight vimSet                               cterm=italicbold
+highlight vimSetEqual             ctermfg=015  cterm=none
+highlight vimSetMod               ctermfg=160  cterm=bolditalic
+highlight vimSetSep               ctermfg=161  cterm=none
+highlight vimString               ctermfg=143  cterm=none
+highlight vimSynMtchOpt           ctermfg=131
+highlight vimUserFunc             ctermfg=255
+highlight vimVar                  ctermfg=148  cterm=none
+
+
+highlight vimAugroup              ctermfg=none  ctermbg=none   cterm=none
+highlight vimAugroupError         ctermfg=none  ctermbg=none   cterm=none
+highlight vimAuSyntax             ctermfg=none  ctermbg=none   cterm=none
+highlight vimAutoCmdSfxList       ctermfg=none  ctermbg=none   cterm=none
+highlight vimAutoCmdSpace         ctermfg=none  ctermbg=none   cterm=none
+highlight vimAutoEventList        ctermfg=none  ctermbg=none   cterm=none
+highlight vimClusterName          ctermfg=none  ctermbg=none   cterm=none
+highlight vimCollClass            ctermfg=none  ctermbg=none   cterm=none
+highlight vimCollection           ctermfg=none  ctermbg=none   cterm=none
+highlight vimEcho                 ctermfg=none  ctermbg=none   cterm=none
+highlight vimEscapeBrace          ctermfg=none  ctermbg=none   cterm=none
+highlight vimExecute              ctermfg=none  ctermbg=none   cterm=none
+highlight vimExtCmd               ctermfg=none  ctermbg=none   cterm=none
+highlight vimFBVar                ctermfg=none  ctermbg=none   cterm=none
+highlight vimFgBgAttrib           ctermfg=none  ctermbg=none   cterm=none
+highlight vimFgBg                 ctermfg=none  ctermbg=none   cterm=none
+highlight vimFiletype             ctermfg=none  ctermbg=none   cterm=none
+highlight vimFilter               ctermfg=none  ctermbg=none   cterm=none
+highlight vimFuncBlank            ctermfg=none  ctermbg=none   cterm=none
+highlight vimFuncBody             ctermfg=none  ctermbg=none   cterm=none
+highlight vimFunction             ctermfg=none  ctermbg=none   cterm=none
+highlight vimGroupList            ctermfg=none  ctermbg=none   cterm=none
+highlight vimGroupName            ctermfg=none  ctermbg=none   cterm=none
+highlight vimHiBang               ctermfg=none  ctermbg=none   cterm=none
+highlight vimHiClear              ctermfg=none  ctermbg=none   cterm=none
+highlight vimHiCtermColor         ctermfg=none  ctermbg=none   cterm=none
+highlight vimHiFontname           ctermfg=none  ctermbg=none   cterm=none
+highlight vimHiGuiFontname        ctermfg=none  ctermbg=none   cterm=none
+highlight vimHiKeyList            ctermfg=none  ctermbg=none   cterm=none
+highlight vimHiLink               ctermfg=none  ctermbg=none   cterm=none
+highlight vimIf                   ctermfg=none  ctermbg=none   cterm=none
+highlight vimMapLhs               ctermfg=none  ctermbg=none   cterm=none
+highlight vimMapRhs               ctermfg=none  ctermbg=none   cterm=none
+highlight vimMapRhsExtend         ctermfg=none  ctermbg=none   cterm=none
+highlight vimMenuBang             ctermfg=none  ctermbg=none   cterm=none
+highlight vimMenuMap              ctermfg=none  ctermbg=none   cterm=none
+highlight vimMenuPriority         ctermfg=none  ctermbg=none   cterm=none
+highlight vimMenuRhs              ctermfg=none  ctermbg=none   cterm=none
+highlight vimNormCmds             ctermfg=none  ctermbg=none   cterm=none
+highlight vimOperParen            ctermfg=none  ctermbg=none   cterm=none
+highlight vimPatRegion            ctermfg=none  ctermbg=none   cterm=none
+highlight vimRegion               ctermfg=none  ctermbg=none   cterm=none
+highlight vimSubstPat             ctermfg=none  ctermbg=none   cterm=none
+highlight vimSubstRange           ctermfg=none  ctermbg=none   cterm=none
+highlight vimSubstRep4            ctermfg=none  ctermbg=none   cterm=none
+highlight vimSubstRep             ctermfg=none  ctermbg=none   cterm=none
+highlight vimSyncLinebreak        ctermfg=none  ctermbg=none   cterm=none
+highlight vimSyncLinecont         ctermfg=none  ctermbg=none   cterm=none
+highlight vimSyncLines            ctermfg=none  ctermbg=none   cterm=none
+highlight vimSyncMatch            ctermfg=none  ctermbg=none   cterm=none
+highlight vimSyncRegion           ctermfg=none  ctermbg=none   cterm=none
+highlight vimSynKeyRegion         ctermfg=none  ctermbg=none   cterm=none
+highlight vimSynLine              ctermfg=none  ctermbg=none   cterm=none
+highlight vimSynMatchRegion       ctermfg=none  ctermbg=none   cterm=none
+highlight vimSynPatMod            ctermfg=none  ctermbg=none   cterm=none
+highlight vimSynRegion            ctermfg=none  ctermbg=none   cterm=none
+highlight vimUserCmd              ctermfg=none  ctermbg=none   cterm=none
+highlight VimSynMtchCchar         ctermfg=none  ctermbg=none   cterm=none
